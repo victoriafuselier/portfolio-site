@@ -34,6 +34,84 @@ main,
     overflow: hidden;
 }
 
+.header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 12px;
+    align-items: center;
+}
+
+/* .left-header-content,
+.right-header-content {
+    width: 40%;
+} */
+
+.right-header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 175px;
+}
+
+.right-header-content ul {
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+    justify-content: space-between;
+}
+
+/* header svg {
+    height: 25px;
+    width: 25px;
+} */
+
+.menu-button {
+    background: transparent;
+    /* border: 1px solid white;
+    border-radius: 7px; */
+    border: none;
+    fill: white;
+    z-index: 3;
+}
+
+.menu-button:hover {
+    cursor: pointer;
+}
+
+.menu-button .bar {
+    transition:
+        y 300ms ease-in 300ms,
+        rotate 300ms ease-in,
+        opacity 0ms 300ms;
+    transform-origin: center;
+}
+
+.menu-button[aria-expanded="true"] .bar {
+    transition:
+        y 300ms ease-in,
+        rotate 300ms ease-in 300ms,
+        opacity 0ms 300ms;
+}
+
+.menu-button[aria-expanded="true"] .top,
+.menu-button[aria-expanded="true"] .bottom {
+    y: 45;
+}
+
+.menu-button[aria-expanded="true"] .top {
+    rotate: 45deg;
+}
+
+.menu-button[aria-expanded="true"] .middle {
+    opacity: 0;
+}
+
+.menu-button[aria-expanded="true"] .bottom {
+    rotate: -45deg;
+}
+
 .home,
 .intro-wrapper {
     margin: 0 24px;
