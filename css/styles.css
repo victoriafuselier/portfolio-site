@@ -1,0 +1,128 @@
+body {
+    /* background-image: url(../images/stars.jpg); */
+    background: linear-gradient(rgba(25, 50, 60, .75), rgba(65, 101, 138, .75), rgba(149, 178, 176, .75)),
+                url(../images/stars.jpg);
+    background-size: 200%;
+    animation: backgroundFlow 400s ease infinite;
+    color: white;
+    font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+@keyframes backgroundFlow {
+	0% {
+		background-position: left;
+	}
+    25% {
+		background-position: center;
+	}
+	50% {
+		background-position: right;
+	}
+    75% {
+        background-position: center;
+    }
+    100% {
+        background-position: left;
+    }
+}
+
+body,
+main,
+.home,
+.intro-wrapper {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.home,
+.intro-wrapper {
+    margin: 0 24px;
+}
+
+.intro-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-text {
+    font-weight: 400;
+    text-align: center;
+}
+
+.intro-text h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.name {
+    font-size: 2rem;
+    font-weight: 800;
+    display: inline-block;
+    letter-spacing: 1px;
+    /* text-shadow: 
+      1px 0px 1px #ccc, 0px 1px 1px #eee, 
+      2px 1px 1px #ccc, 1px 2px 1px #eee,
+      3px 2px 1px #ccc, 2px 3px 1px #eee,
+      4px 3px 1px #ccc, 3px 4px 1px #eee,
+      5px 4px 1px #ccc, 4px 5px 1px #eee,
+      6px 5px 1px #ccc, 5px 6px 1px #eee,
+      7px 6px 1px #ccc; */
+    text-shadow: 1px 0px 1px #ccc, 0px 1px 1px black, 
+    2px 1px 1px black, 1px 2px 1px grey,
+    3px 2px 1px black, 2px 3px 1px grey,
+    4px 3px 1px black, 3px 4px 1px grey,
+    5px 4px 1px black, 4px 5px 1px grey,
+    6px 5px 1px black, 5px 6px 1px grey,
+    7px 6px 1px black;
+}
+
+.intro-role-container {
+    margin-top: 30px;
+    font-weight: 700;
+}
+
+.intro-role {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.intro-links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    align-items: flex-end;
+}
+
+.intro-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.75rem;
+}
+
+.intro-links-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    transition: all .5s ease-out;
+}
+
+.intro-links-wrapper:hover {
+    transform: scale(1.2);    
+}
+
+.intro-links-wrapper:first-of-type {
+    margin-bottom: 15px;
+}
+
+.intro-links-wrapper img {
+    margin-left: 10px;
+}
