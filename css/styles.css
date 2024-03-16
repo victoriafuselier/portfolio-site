@@ -6,6 +6,8 @@ body {
     animation: backgroundFlow 400s ease infinite;
     color: white;
     font-family: 'Fira Sans Condensed', sans-serif;
+    height: 100vh;
+    overflow: hidden;
 }
 
 @keyframes backgroundFlow {
@@ -26,12 +28,22 @@ body {
     }
 }
 
-body,
 main,
 .home,
-.intro-wrapper {
-    height: 100vh;
+.intro-wrapper,
+.menu,
+.menu-wrapper,
+.about,
+.about-wrapper,
+.contact,
+.contact-wrapper {
+    height: 90vh;
     overflow: hidden;
+}
+
+header,
+.header-content {
+    height: 10vh;
 }
 
 .header-content {
@@ -113,7 +125,10 @@ main,
 }
 
 .home,
-.intro-wrapper {
+.intro-wrapper,
+.menu-wrapper,
+.about-wrapper,
+.contact-wrapper {
     margin: 0 24px;
 }
 
@@ -133,18 +148,18 @@ main,
     text-align: center;
 }
 
-.intro-text h3 {
+.intro-text h1 {
     margin: 0;
     font-size: 1.25rem;
     text-transform: uppercase;
     font-weight: 600;
 }
 
-.intro-text h3:last-of-type {
+.intro-text h1:last-of-type {
     font-size: 1.75rem;
 }
 
-.intro-text h3:last-of-type {
+.intro-text h1:last-of-type {
     margin-top: 10px;
     font-size: 1.4rem;
 }
@@ -198,12 +213,17 @@ main,
     align-items: flex-end;
 }
 
-.intro-links a {
+.intro-links button {
     color: white;
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: 600;
     font-family: "Unica One", sans-serif;
+    background: transparent;
+    border: none;
+    z-index: 3;
+    color: white;
+    text-decoration: none;
 }
 
 .intro-links-wrapper {
@@ -224,4 +244,104 @@ main,
 
 .intro-links-wrapper img {
     margin-left: 10px;
+}
+
+.menu-wrapper ul {
+    list-style-type: circle;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.menu-wrapper button {
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: "Unica One", sans-serif;
+    width: fit-content;
+    background: transparent;
+    border: none;
+    color: white;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.about-wrapper,
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.about-wrapper-content,
+.contact-wrapper-content {
+    width: 60%;
+}
+
+.about h1,
+.contact h1 {
+    font-family: "Unica One", sans-serif;
+}
+
+.about-page-button {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 1.25rem;
+    font-family: "Sofia", cursive;
+    z-index: 3;
+}
+
+.about-links-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.about-links-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.contact h2 {
+    margin-top: 0;
+}
+
+form {
+    border: 3px solid white;
+    border-radius: 5px;
+    padding: 30px;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+form h2,
+form p,
+#send-button {
+    text-align: center;
+}
+
+.form-content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+
+p {
+    margin: 0;
+}
+
+input,
+textarea {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#send-button {
+    width: 70%;
+    margin: 0 auto;
 }

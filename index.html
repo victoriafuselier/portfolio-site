@@ -34,21 +34,77 @@
         <div class="home">
             <div class="intro-wrapper">
                 <div class="intro-text">
-                    <h3>hi, I'm <div class="name" id="full-name">Victoria Fuselier</div></h3>
-                    <h3>but you can call me <div class="name">Vic</div></h3>
+                    <h1>hi, I'm <div class="name" id="full-name">Victoria Fuselier</div></h1>
+                    <h1>but you can call me <div class="name">Vic</div></h1>
                     <div class="intro-role-container">
                         <p class="intro-role">junior front-end web developer</p>
                     </div>
                     <div class="intro-links">
                         <div class="intro-links-wrapper">
-                            <a href="">about me</a>
+                            <button id="about-button">about me</button>
                             <img src="images/arrow.png"></img>
                         </div>
                         <div class="intro-links-wrapper">
-                            <a href="">see my projects</a>
+                            <button id="projects-button">see my projects</button>
                             <img src="images/arrow.png"></img>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="menu-wrapper">
+                <ul>
+                    <li>
+                        <button class="nav-buttons" id="nav-home">Home</button>
+                    </li>
+                    <li>
+                        <button class="nav-buttons" id="nav-about">About</button>
+                    </li>
+                    <li>
+                        <button class="nav-buttons" id="nav-projects">Projects</button>
+                    </li>
+                    <li>
+                        <button class="nav-buttons" id="nav-contact">Contact</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="about">
+            <div class="about-wrapper">
+                <div class="about-wrapper-content">
+                    <h1>About</h1>
+                    <div class="about-text">
+                        <p>I'm an aspiring web developer in search of an entry-level position in front-end web development.</p>
+                        <p>My strengths include a good eye for design, exceptional grammar/writing skills, time-management proficiency, and great teamwork capabilities.</p>
+                        <div class="about-links-container">
+                            <div class="about-links-wrapper">
+                                <button class="about-page-button" id="education-button">Education</button>
+                                <img src="images/arrow.png"></img>
+                            </div>
+                            <div class="about-links-wrapper">
+                                <button class="about-page-button" id="skills-button">Skills</button>
+                                <img src="images/arrow.png"></img>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact">
+            <div class="contact-wrapper">
+                <div class="contact-wrapper-content">
+                    <h1>Contact</h1>
+                    <form>
+                        <h2>Fancy a chat?</h2>
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name">
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email">
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message"></textarea>
+                        <button type="submit" id="send-button" name="send">Send Message</button>
+                    </form>
                 </div>
             </div>
         </div>
