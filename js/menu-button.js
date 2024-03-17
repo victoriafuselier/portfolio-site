@@ -6,7 +6,7 @@ const homeDisplay = document.querySelector('.home');
 const menuDisplay = document.querySelector('.menu');
 const aboutNavButton = document.querySelector('#nav-about');
 const aboutDisplay = document.querySelector('.about');
-const aboutButton = document.querySelector('#about-button');
+const aboutButton = document.querySelector('#home-about-button');
 const contactNavButton = document.querySelector('#nav-contact');
 const contactDisplay = document.querySelector('.contact');
 

@@ -34,6 +34,11 @@ body {
     }
 }
 
+body,
+button {
+    text-shadow: 1px 1px 2px #000, -1px 1px 2px #000, -1px -1px 0 #000, 1px -1px 0 #000;
+}
+
 main,
 .home,
 .home-wrapper,
@@ -46,6 +51,14 @@ main,
 .projects,
 .projects-wrapper {
     height: 100vh;
+}
+
+.home,
+.menu,
+.about,
+.contact,
+.projects {
+    margin: 0 24px;
 }
 
 .menu,
@@ -69,10 +82,18 @@ main,
     justify-content: center;
 }
 
+.menu-wrapper,
+.about-wrapper,
+.contact-wrapper,
+.projects-wrapper {
+    padding: 30% 15% 25%;
+
+}
+
 header {
     position: fixed;
     z-index: 5;
-    top: 24px;
+    top: 5vh;
     width: 100%;
 }
 
@@ -81,7 +102,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 24px;
+    padding: 0 5vw;
 }
 
 .left-header-content {
@@ -95,8 +116,6 @@ header {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    /* width: 175px; */
-    /* transform: none; */
 }
 
 .right-header-content ul {
@@ -150,15 +169,6 @@ header {
     rotate: -45deg;
 }
 
-.home,
-.menu,
-.about,
-.contact,
-.projects {
-    margin: 0 24px;
-}
-
-
 .intro-text {
     font-weight: 400;
     display: flex;
@@ -186,25 +196,13 @@ header {
 .name {
     margin-left: 6px;
     margin-bottom: 3px;
-    font-size: 2rem;
+    font-size: 2.7rem;
     font-weight: 800;
     display: inline-block;
     letter-spacing: 2px;
-    /* text-shadow: 
-      1px 0px 1px #ccc, 0px 1px 1px #eee, 
-      2px 1px 1px #ccc, 1px 2px 1px #eee,
-      3px 2px 1px #ccc, 2px 3px 1px #eee,
-      4px 3px 1px #ccc, 3px 4px 1px #eee,
-      5px 4px 1px #ccc, 4px 5px 1px #eee,
-      6px 5px 1px #ccc, 5px 6px 1px #eee,
-      7px 6px 1px #ccc; */
-    text-shadow: 1px 0px 1px #ccc, 0px 1px 1px black, 
-    2px 1px 1px black, 1px 2px 1px grey,
-    3px 2px 1px black, 2px 3px 1px grey,
-    4px 3px 1px black, 3px 4px 1px grey,
-    5px 4px 1px black, 4px 5px 1px grey,
-    6px 5px 1px white, 5px 6px 1px grey,
-    7px 6px 1px white;
+    text-shadow: 1px 1px 2px #000, -1px 1px 2px #000, -1px -1px 0 #000, 1px -1px 0 #000, 1px 0px 1px black, 0px 1px 1px black, 
+      2px 1px 1px black, 1px 2px 1px #eee,
+      3px 2px 1px #ccc, 2px 3px 1px #eee;
 }
 
 #full-name {
@@ -221,11 +219,9 @@ header {
     border-bottom: 0.5px dashed white;
     border-top: 0.5px dashed white;
     text-transform: lowercase;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-family: "Sofia", cursive;
     font-weight: 500;
-    letter-spacing: 1px;
-    text-shadow: 0px 1px 1px black;
 }
 
 .intro-links {
@@ -237,7 +233,6 @@ header {
 .intro-links button {
     color: white;
     text-decoration: none;
-    font-size: 1.3rem;
     font-weight: 600;
     font-family: "Unica One", sans-serif;
     background: transparent;
@@ -245,6 +240,10 @@ header {
     z-index: 3;
     color: white;
     text-decoration: none;
+}
+
+.intro-links button, .about-page-button {
+    font-size: 1.6rem;
 }
 
 .intro-links-wrapper {
@@ -263,8 +262,15 @@ header {
     margin-bottom: 15px;
 }
 
-.intro-links-wrapper img {
-    margin-left: 10px;
+.intro-links-wrapper,
+.about-links-wrapper {
+    flex-direction: row-reverse;
+}
+
+.intro-links-wrapper img,
+.about-links-wrapper img {
+    margin-right: 10px;
+    height: 40px;
 }
 
 .menu-wrapper ul {
@@ -273,11 +279,11 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding-right: 100px;
+    padding-right: 30%;
 }
 
 .menu-wrapper button {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 600;
     font-family: "Unica One", sans-serif;
     width: fit-content;
@@ -289,27 +295,40 @@ header {
 }
 
 .about-wrapper,
-.contact-wrapper {
+.contact-wrapper, {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
 }
 
-.about-wrapper-content,
-.contact-wrapper-content {
-    width: 60%;
+.about-wrapper {
+    align-items: center;
+}
+
+.contact-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .about h1,
 .contact h1 {
     font-family: "Unica One", sans-serif;
+    font-size: 2.5rem;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+.about-text, .about-links-container {
+    margin-top: 15%;
+}
+
+.about-text p {
+    font-size: 1.2rem;
 }
 
 .about-page-button {
     border: none;
     background: transparent;
     color: white;
-    font-size: 1.25rem;
     font-family: "Sofia", cursive;
     z-index: 3;
 }
@@ -317,6 +336,8 @@ header {
 .about-links-container {
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
 }
 
 .about-links-wrapper {
@@ -328,12 +349,22 @@ header {
     margin-top: 0;
 }
 
+.contact-page-content {
+    margin-top: 15%;
+}
+
+.contact-links-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
 form {
     border: 3px solid white;
     border-radius: 5px;
-    padding: 30px;
-    max-width: 350px;
-    margin: 0 auto;
+    padding: 15px;
+    max-width: 300px;
+    margin: 15% auto 0;
 }
 
 form h2,
@@ -348,7 +379,7 @@ form p,
 }
 
 form h2 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-bottom: 25px;
 }
 
@@ -359,7 +390,11 @@ p {
 input,
 textarea {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    height: 50px;
 }
 
 #send-button {
