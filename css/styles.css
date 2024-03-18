@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --green: #47682C;
+}
+
 body {
     background: linear-gradient(rgba(25, 50, 60, .75), rgba(65, 101, 138, .75), rgba(149, 178, 176, .75)),
                 url(../images/stars.jpg);
@@ -295,13 +299,18 @@ header {
 }
 
 .about-wrapper,
-.contact-wrapper, {
+.contact-wrapper {
     display: flex;
     justify-content: center;
 }
 
 .about-wrapper {
     align-items: center;
+}
+
+.about-wrapper-content {
+    display: flex;
+    flex-direction: column;
 }
 
 .contact-wrapper {
@@ -317,12 +326,13 @@ header {
     text-underline-offset: 10px;
 }
 
-.about-text, .about-links-container {
+.about-text {
     margin-top: 15%;
 }
 
 .about-text p {
     font-size: 1.2rem;
+    float: left;
 }
 
 .about-page-button {
@@ -333,16 +343,32 @@ header {
     z-index: 3;
 }
 
+.about-image-links-container {
+    display: flex;
+    margin-top: 5vh;
+}
+
 .about-links-container {
     display: flex;
-    justify-content: space-around;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .about-links-wrapper {
     display: flex;
     align-items: center;
+}
+
+.about-photo-container {
+    float: right;
+    margin: 0 7vw;
+}
+
+#about-photo {
+    height: 20vh;
+    border-radius: 15px;
+    opacity: 90%;
 }
 
 .contact h2 {
@@ -362,7 +388,7 @@ header {
 form {
     border: 3px solid white;
     border-radius: 5px;
-    padding: 15px;
+    padding: 20px 10px;
     max-width: 300px;
     margin: 15% auto 0;
 }
@@ -380,7 +406,7 @@ form p,
 
 form h2 {
     font-size: 1.25rem;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 p {
@@ -389,15 +415,39 @@ p {
 
 input,
 textarea {
+    margin-top: 7px;
     width: 100%;
+    border: 1px solid black;
+    font-size: 1rem;
+    padding: 5px 10px;
+    font-family: 'Fira Sans Condensed';
+    letter-spacing: .5px;
+    border-radius: 5px;
+}
+
+input {
     margin-bottom: 10px;
 }
 
 textarea {
     height: 50px;
+    margin-bottom: 20px;
+}
+
+.form-button-container {
+    display: flex;
+    justify-content: center;
 }
 
 #send-button {
-    width: 70%;
-    margin: 0 auto;
+    width: 60%;
+    background-color: var(--green);
+    color: white;
+    padding: 5px;
+    font-size: 1.1rem;
+    font-family: 'Fira Sans Condensed';
+    border-radius: 10px;
+    border-color: white;
+    text-transform: uppercase;
 }
+
