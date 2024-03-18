@@ -82,6 +82,7 @@ main,
 .contact-wrapper,
 .projects-wrapper {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -182,49 +183,53 @@ header {
 
 .intro-text h1 {
     margin: 0;
-    font-size: 1.5rem;
-    text-transform: uppercase;
+    font-size: 1.3rem;
+    text-transform: lowercase;
     font-weight: 600;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
-/* .intro-text h1:last-of-type {
-    font-size: 1.1rem;
-} */
+#intro-sentence-2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;;
+}
+
+#intro-call-me {
+    margin: 0 5px;
+}
 
 .name {
-    margin-left: 6px;
-    margin-bottom: 3px;
+    font-size: 2.1rem;
+    text-transform: uppercase;
     font-weight: 800;
     display: inline-block;
     letter-spacing: 2px;
-    text-shadow: 1px 1px 2px #000, -1px 1px 2px #000, -1px -1px 0 #000, 1px -1px 0 #000, 1px 0px 1px black, 0px 1px 1px black, 
-      2px 1px 1px black, 1px 2px 1px #eee,
-      3px 2px 1px #ccc, 2px 3px 1px #eee;
+    text-shadow: 2px 2px 0px #000, -2px 2px 0px #000, -2px -2px 0px #000, 2px -2px 0px #000, 3px 0px 7px white, 0px 1px 7px white, 2px 1px 7px white, -2px -2px 7px white, 1px 2px 1px #eee, 3px 2px 1px #ccc, 2px 3px 1px #EEE;
 }
 
 #full-name {
-    font-size: 1.75rem;
+    display: flex;
+    flex-direction: column;
 }
 
-#nickname {
-    font-size: 2rem;
-}
-
-/* .intro-role,
+.intro-role,
 .intro-links {
-    margin-top: 3%;
-} */
+    margin-top: 10px;
+}
 
 .intro-role-p {
     padding: 5px 0px;
     border-bottom: 0.5px dashed white;
     border-top: 0.5px dashed white;
     text-transform: lowercase;
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-family: "Sofia", cursive;
     font-weight: 500;
+    text-align: center;
 }
 
 .intro-links {
@@ -247,7 +252,7 @@ header {
 }
 
 .intro-links button, .about-page-button {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .intro-links-wrapper {
@@ -256,6 +261,10 @@ header {
     align-items: center;
     width: fit-content;
     transition: all .5s ease-out;
+}
+
+.intro-links-wrapper:first-of-type {
+    margin-bottom: 5px;
 }
 
 .intro-links-wrapper:hover {
@@ -292,7 +301,7 @@ header {
 }
 
 .menu-wrapper button {
-    font-size: 2rem;
+    font-size: 2.3rem;
     font-weight: 600;
     font-family: "Unica One", sans-serif;
     width: fit-content;
@@ -320,7 +329,7 @@ header {
 .about h1,
 .contact h1 {
     font-family: "Unica One", sans-serif;
-    font-size: 1.75rem;
+    font-size: 2rem;
     text-decoration: underline;
     text-underline-offset: 10px;
 }
@@ -340,12 +349,13 @@ header {
     color: white;
     font-family: "Sofia", cursive;
     z-index: 3;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .about-image-links-container {
     display: flex;
     margin-top: 5vh;
+    justify-content: center;
 }
 
 .about-links-container {
@@ -495,6 +505,31 @@ textarea {
     text-transform: uppercase;
 }
 
+@media screen and (min-width: 640px) {
+    #full-name {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #first-name {
+        margin-right: 5px;
+    }
+
+    #intro-sentence-2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #intro-sentence-2 h1:last-of-type {
+        margin-left: 5px;
+    }
+
+    .intro-text h1:first-of-type {
+        margin-bottom: 0;
+    }
+}
+
 @media screen and (min-width: 768px) {
     
     .menu-button {
@@ -523,7 +558,8 @@ textarea {
     }
 
     .intro-text h1 {
-        font-size: 2rem;
+        font-size: 1.2rem;
+        text-transform: lowercase;    
     }
 
     .name {
