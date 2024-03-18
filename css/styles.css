@@ -90,7 +90,7 @@ main,
 .about-wrapper,
 .contact-wrapper,
 .projects-wrapper {
-    padding: 30% 15% 25%;
+    padding: 25vh 15vw;
 
 }
 
@@ -262,7 +262,8 @@ header {
     transform: scale(1.2);    
 }
 
-.intro-links-wrapper:first-of-type {
+.intro-links-wrapper:first-of-type,
+.about-links-wrapper {
     margin-bottom: 15px;
 }
 
@@ -279,11 +280,15 @@ header {
 
 .menu-wrapper ul {
     list-style-type: circle;
-    height: 60%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     padding-right: 30%;
+}
+
+.menu li::marker {
+    font-size: 3rem;
 }
 
 .menu-wrapper button {
@@ -302,20 +307,14 @@ header {
 .contact-wrapper {
     display: flex;
     justify-content: center;
-}
-
-.about-wrapper {
     align-items: center;
+    flex-direction: column;
 }
 
 .about-wrapper-content {
     display: flex;
     flex-direction: column;
-}
-
-.contact-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
+    max-width: 450px;
 }
 
 .about h1,
@@ -376,13 +375,47 @@ header {
 }
 
 .contact-page-content {
-    margin-top: 15%;
+    margin-top: 5vh;
 }
 
 .contact-links-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+
+.contact ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.contact svg {
+    height: 45px;
+    width: 65px;
+}
+
+svg {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.github, 
+.linkedIn,
+.treehouse {
+    fill: white;
+    stroke: white;
+}
+
+.mail {
+    .stroke: white;
+}
+
+.contact svg:hover,
+.contact svg:focus {
+    transform: rotate(30deg) scale(1.2);
 }
 
 form {
