@@ -200,7 +200,6 @@ header {
 .name {
     margin-left: 6px;
     margin-bottom: 3px;
-    font-size: 2.7rem;
     font-weight: 800;
     display: inline-block;
     letter-spacing: 2px;
@@ -213,9 +212,13 @@ header {
     font-size: 1.75rem;
 }
 
+#nickname {
+    font-size: 2rem;
+}
+
 .intro-role,
 .intro-links {
-    margin-top: 40px;
+    margin-top: 3%;
 }
 
 .intro-role-p {
@@ -262,10 +265,10 @@ header {
     transform: scale(1.2);    
 }
 
-.intro-links-wrapper:first-of-type,
+/* .intro-links-wrapper:first-of-type,
 .about-links-wrapper {
     margin-bottom: 15px;
-}
+} */
 
 .intro-links-wrapper,
 .about-links-wrapper {
@@ -320,13 +323,13 @@ header {
 .about h1,
 .contact h1 {
     font-family: "Unica One", sans-serif;
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     text-decoration: underline;
     text-underline-offset: 10px;
 }
 
 .about-text {
-    margin-top: 15%;
+    margin-top: 10%;
 }
 
 .about-text p {
@@ -374,8 +377,9 @@ header {
     margin-top: 0;
 }
 
-.contact-page-content {
-    margin-top: 5vh;
+.contact-page-content,
+form {
+    margin-top: 30px;
 }
 
 .contact-links-wrapper {
@@ -391,8 +395,8 @@ header {
 }
 
 .contact svg {
-    height: 45px;
-    width: 65px;
+    height: 25px;
+    width: 45px;
 }
 
 svg {
@@ -410,7 +414,7 @@ svg {
 }
 
 .mail {
-    .stroke: white;
+    stroke: white;
 }
 
 .contact svg:hover,
@@ -421,9 +425,9 @@ svg {
 form {
     border: 3px solid white;
     border-radius: 5px;
-    padding: 20px 10px;
+    padding: 15px 10px;
     max-width: 300px;
-    margin: 15% auto 0;
+    margin: 10% auto 0;
 }
 
 form h2,
@@ -439,7 +443,16 @@ form p,
 
 form h2 {
     font-size: 1.25rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+form h2,
+form label {
+    text-transform: uppercase;
+}
+
+form label {
+    letter-spacing: 1px;
 }
 
 p {
@@ -482,5 +495,65 @@ textarea {
     border-radius: 10px;
     border-color: white;
     text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+    
+    .menu-button {
+        width: 60;
+    }
+    
+    .about-text p {
+        font-size: 1.8rem;
+    }
+
+    .intro-links button, .about-page-button {
+        font-size: 2rem;
+    }
+
+    .about h1, .contact h1 {
+        font-family: "Unica One", sans-serif;
+        font-size: 3rem;
+    }
+
+    .intro-role-p {
+        padding: 10px 0px;
+        border-bottom: 0.5px dashed white;
+        border-top: 0.5px dashed white;
+        text-transform: lowercase;
+        font-size: 2.3rem;
+    }
+
+    .intro-text h1 {
+        font-size: 2rem;
+    }
+
+    .name {
+        margin-left: 17px;
+        margin-bottom: 0px;
+        font-size: 4.7rem;
+    }
+
+    #full-name {
+        font-size: 3rem;
+    }
+
+    .intro-text h1:last-of-type {
+        font-size: 2.35rem;
+    }
+
+    .intro-links button, .about-page-button {
+        font-size: 2.5rem;
+    }
+
+    .contact svg {
+        height: 45px;
+        width: 65px;
+    }
+
+    .contact-page-content,
+    form {
+        margin-top: 60px;
+    }
 }
 
